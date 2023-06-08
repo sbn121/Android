@@ -33,12 +33,14 @@ public class MainActivity extends AppCompatActivity {
         );
         tvParams.endToEnd  = ConstraintLayout.LayoutParams.PARENT_ID;
         tvParams.topToTop  = ConstraintLayout.LayoutParams.PARENT_ID;
-        tvParams.startToEnd  = ConstraintLayout.LayoutParams.PARENT_ID;
+        tvParams.startToStart  = ConstraintLayout.LayoutParams.PARENT_ID;
 
         TextView tv = new TextView(this);
         tv.setLayoutParams(tvParams);
         tv.setText("글자 추가되었습니까?");
         layout.addView(tv);
+
+
 
         setContentView(layout); // <- R클래스로 존재하는 layout내부에 있는 모든 것들을 java에서 사용할 수 있게 연결.
         // new로 초기화는 새로 인스턴스화 x
