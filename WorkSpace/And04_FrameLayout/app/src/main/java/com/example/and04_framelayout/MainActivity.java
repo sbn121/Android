@@ -33,8 +33,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         imgList.add(findViewById(R.id.imgv2));
         imgList.add(findViewById(R.id.imgv3));
 
-
-        //버튼의 클릭을 감지하는 메소드 . 인터페이스 View.OnClickListener<-
+        //버튼의 클릭을 감지하는 메소드. 인터페이스 View.OnClickListener<-
         // 1. 직접 인터페이스를 인스턴스화하여 파라메터로 넘기는 방법
 //        View.OnClickListener sbnOnclick = new View.OnClickListener() {
 //            @Override
@@ -82,6 +81,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             Log.d("로그", "변수 Flag : "+flag);
             changeImage();
         });
+
     }
 
     // 3. 인터페이스를 상속받는 방법
