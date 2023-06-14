@@ -10,6 +10,9 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import java.io.Serializable;
+import java.util.ArrayList;
+
 public class LoginActivity extends AppCompatActivity {
     EditText id, pw;
     Button btn;
@@ -34,8 +37,25 @@ public class LoginActivity extends AppCompatActivity {
                 //ex) DAO, DTO, VO => 화면에 떠있는 객체가 아니기 때문에 그래픽 작업을 하면 오류가 발생함 => 일반 클래스
                 //ex) ↑ Act, Fragment => 화면에 떠있는 객체이기 때문에 그래픽 작업을 할 수 있음. 하지만 화면에 떠있는지의 상태를 알려줄 수 있는게 필요함 =>Context
                 //=> 일반클래스에서도 그래픽처리가 가능하게 만드려면 Activity가 Context라는 것을 파라메터로 보내줬을 때. 가능함.
-                Intent intent = new Intent(LoginActivity.this, MainActivity.class);
                 if("admin".equals(id.getText().toString())&&"admin1234".equals(pw.getText().toString())) {
+                    Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+                    intent.putExtra("strkey", id.getText().toString()+"intent");
+                    // intkey 숫자를 다음액티비티로 전송해보기 ( int )
+                    intent.putExtra("intkey", 564);
+
+                    LoginDTO dto = new LoginDTO(id.getText().toString()+"1", pw.getText().toString()+"1");
+                    intent.putExtra("dtokey", dto);
+
+
+                    ArrayList<LoginDTO> list = new ArrayList<>(); // 초기화식 LoginDTO타입을 묶어놓을 공간 마련
+                    list.add(new LoginDTO("아이디1", "비밀번호1"));
+                    list.add(new LoginDTO("아이디2", "비밀번호2"));
+                    list.add(new LoginDTO("아이디3", "비밀번호3"));
+                    list.add(new LoginDTO("아이디4", "비밀번호4"));
+                    list.add(new LoginDTO("아이디5", "비밀번호5"));
+
+                    intent.putExtra("list", list); //startActivity메소드 실행 전 데이터 담는 처리를 끝낸다.
+
                     startActivity(intent);
                 }else {
                     Toast.makeText(LoginActivity.this, "아이디, 비밀번호 틀림", Toast.LENGTH_SHORT).show();
@@ -45,4 +65,13 @@ public class LoginActivity extends AppCompatActivity {
         });
 
     }
+
+    public class SbnClass implements Serializable {
+
+    }
+
+    public void method(Serializable s) {
+        // 역직렬화 : SbnClass s2 = (SbnClass) s;
+    }
+
 }
