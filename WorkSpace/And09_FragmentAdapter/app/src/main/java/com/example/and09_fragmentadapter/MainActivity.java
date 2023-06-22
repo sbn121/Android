@@ -13,7 +13,7 @@ import java.util.zip.Inflater;
 
 public class MainActivity extends AppCompatActivity {
 
-    FrameLayout container;
+//    FrameLayout container;
     Button btn_menu1, btn_menu2, btn_adapter;
 
     @Override

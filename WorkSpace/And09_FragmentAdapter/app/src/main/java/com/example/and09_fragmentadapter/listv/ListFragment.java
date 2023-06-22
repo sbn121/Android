@@ -30,6 +30,11 @@ public class ListFragment extends Fragment {
         list.add(new ListDTO(R.drawable.img3, 3, "캐릭터3"));
         list.add(new ListDTO(R.drawable.img4, 4, "캐릭터4"));
         list.add(new ListDTO(R.drawable.img5, 5, "캐릭터5"));
+        list.add(new ListDTO(R.drawable.img1, 6, "캐릭터6"));
+        list.add(new ListDTO(R.drawable.img2, 7, "캐릭터7"));
+        list.add(new ListDTO(R.drawable.img3, 8, "캐릭터8"));
+        list.add(new ListDTO(R.drawable.img4, 9, "캐릭터9"));
+        list.add(new ListDTO(R.drawable.img5, 10, "캐릭터10"));
 
 
         listv = v.findViewById(R.id.listv);
