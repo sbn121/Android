@@ -3,11 +3,11 @@ plugins {
 }
 
 android {
-    namespace 'com.example.and09_fragmentadapter'
+    namespace 'com.example.project01_sbntalk'
     compileSdk 33
 
     defaultConfig {
-        applicationId "com.example.and09_fragmentadapter"
+        applicationId "com.example.project01_sbntalk"
         minSdk 24
         targetSdk 33
         versionCode 1
