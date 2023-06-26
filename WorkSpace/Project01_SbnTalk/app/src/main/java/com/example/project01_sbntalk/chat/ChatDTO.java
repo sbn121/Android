@@ -1,10 +1,8 @@
-package com.example.project01_sbntalk.friend;
+package com.example.project01_sbntalk.chat;
 
-import java.io.Serializable;
+public class ChatDTO {
 
-public class FriendDTO implements Serializable {
     private int resImgId;
-    private String name, msg;
 
     public int getResImgId() {
         return resImgId;
@@ -12,6 +10,14 @@ public class FriendDTO implements Serializable {
 
     public void setResImgId(int resImgId) {
         this.resImgId = resImgId;
+    }
+
+    public int getChatCnt() {
+        return chatCnt;
+    }
+
+    public void setChatCnt(int chatCnt) {
+        this.chatCnt = chatCnt;
     }
 
     public String getName() {
@@ -30,9 +36,13 @@ public class FriendDTO implements Serializable {
         this.msg = msg;
     }
 
-    public FriendDTO(int resImgId, String name, String msg) {
+    public ChatDTO(int resImgId, int chatCnt, String name, String msg) {
         this.resImgId = resImgId;
+        this.chatCnt = chatCnt;
         this.name = name;
         this.msg = msg;
     }
+
+    private int chatCnt;
+    private String name, msg;
 }
