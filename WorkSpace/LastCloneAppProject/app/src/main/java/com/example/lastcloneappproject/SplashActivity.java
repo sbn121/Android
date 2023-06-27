@@ -21,6 +21,8 @@ public class SplashActivity extends AppCompatActivity {
 
         getSupportActionBar().hide();
 
+
+
         Window window =getWindow();
         window.addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_NAVIGATION);
         window.setStatusBarColor(Color.TRANSPARENT);

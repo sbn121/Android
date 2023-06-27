@@ -10,6 +10,7 @@ import android.widget.Toast;
 import com.example.project01_sbntalk.chat.ChatFragment;
 import com.example.project01_sbntalk.databinding.ActivityMainBinding;
 import com.example.project01_sbntalk.friend.FriendFragment;
+import com.example.project01_sbntalk.opentalk.OpenTalkMainFragment;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -40,6 +41,7 @@ public class MainActivity extends AppCompatActivity {
                 fragment = new ChatFragment();
                 actionBar.setTitle("채팅");
             }else if(item.getItemId()==R.id.tab3){
+                fragment = new OpenTalkMainFragment();
                 actionBar.setTitle("오픈채팅");
             }else if(item.getItemId()==R.id.tab4){
                 actionBar.setTitle("쇼핑");

@@ -85,14 +85,4 @@ public class FriendAdapter extends RecyclerView.Adapter<FriendAdapter.ViewHolder
             this.binding = binding;
         }
     }
-
-    public class ViewHolder1 extends RecyclerView.ViewHolder{
-
-        ItemFriendRecvBinding binding;
-
-        public ViewHolder1(@NonNull ItemFriendRecvBinding binding) {
-            super(binding.getRoot());
-            this.binding = binding;
-        }
-    }
 }
