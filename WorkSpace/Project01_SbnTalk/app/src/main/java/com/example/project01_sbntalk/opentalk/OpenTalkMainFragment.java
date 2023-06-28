@@ -65,8 +65,8 @@ public class OpenTalkMainFragment extends Fragment {
 
     ArrayList<Fragment> getFragmentList(){
         ArrayList<Fragment> list = new ArrayList<>();
-        list.add(new OpenSub4Fragment());
-        list.add(new OpenSub4Fragment());
+        list.add(new OpenSub1Fragment());
+        list.add(new OpenTalkSub2Fragment());
         list.add(new OpenSub4Fragment());
         list.add(new OpenSub4Fragment());
         return list;

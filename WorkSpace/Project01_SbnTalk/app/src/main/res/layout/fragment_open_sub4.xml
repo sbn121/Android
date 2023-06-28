@@ -20,49 +20,87 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="오픈채팅 Lite - 지금 대화 중!"/>
+            android:layout_marginVertical="5dp"
+            android:layout_marginStart="10dp"
+            android:text="오픈채팅 Lite - 지금 대화 중!"
+            android:textColor="@color/black"
+            android:textSize="16dp"
+            android:textStyle="bold" />
 
-        <RelativeLayout
+        <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
-            android:layout_height="100dp">
-
-            <ImageView
-                android:scaleType="fitXY"
-                android:layout_width="match_parent"
-                android:layout_height="100dp"
-                android:src="@drawable/money"/>
-            <TextView
-                android:id="@+id/tv_title1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="절약방"
-                android:textColor="@color/white"
-                android:layout_centerInParent="true"/>
-            <TextView
-                android:layout_below="@id/tv_title1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="오늘 소비 인증하기"
-                android:layout_centerHorizontal="true"/>
-        </RelativeLayout>
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/recv_geoji_1"
+            android:layout_height="match_parent"
             android:layout_margin="10dp"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1"/>
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:background="#E6E6E6"/>
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="오픈채팅 Lite 참여하기"
-            android:gravity="center"
-            android:padding="5dp"/>
+            app:cardCornerRadius="10dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/money" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_margin="10dp"
+                        android:src="@drawable/baseline_replay_24" />
+
+                    <TextView
+                        android:id="@+id/tv_title1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:text="절약방"
+                        android:textColor="@color/white"
+                        android:textSize="25dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tv_title1"
+                        android:layout_centerHorizontal="true"
+                        android:text="오늘 소비 인증하기"
+                        android:textColor="@color/white" />
+                </RelativeLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recv_geoji_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_margin="10dp"
+                    android:layout_weight="1" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#E6E6E6" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="10dp"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:text="오픈채팅 Lite 참여하기" />
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
 
     </LinearLayout>
+
     <View
         android:layout_width="match_parent"
         android:layout_height="5dp"
@@ -74,14 +112,20 @@
         android:orientation="vertical">
 
         <TextView
+            android:textSize="16dp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:layout_marginStart="10dp"
+            android:layout_marginVertical="5dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="오픈채팅 오리지널 : 거지방"/>
-            <androidx.recyclerview.widget.RecyclerView
+
+        <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recv_geoji_2"
-            android:layout_margin="10dp"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp" />
     </LinearLayout>
     <View
         android:layout_width="match_parent"
@@ -89,19 +133,23 @@
         android:background="#E6E6E6"/>
 
     <LinearLayout
+        android:id="@+id/ln_vp"
         android:padding="10dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
         <TextView
+            android:textSize="16dp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
             android:layout_margin="10dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="워커홀릭의 두번째 일"/>
             <androidx.recyclerview.widget.RecyclerView
+                android:layout_margin="5dp"
                 android:id="@+id/recv_geoji_3"
-                android:layout_margin="10dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"/>
     </LinearLayout>
@@ -275,14 +323,33 @@
         android:orientation="vertical">
 
         <TextView
+            android:layout_margin="10dp"
+            android:textSize="16dp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="거지방의 또 다른 이름 절약방"/>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#E6E6E6"/>
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/recv_geoji_4"
-                android:layout_margin="10dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"/>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#E6E6E6"/>
+        <TextView
+            android:layout_marginTop="10dp"
+            android:layout_gravity="center"
+            android:textSize="12dp"
+            android:textColor="@color/black"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="더보기 >"/>
     </LinearLayout>
 
     <View
@@ -297,19 +364,18 @@
         android:orientation="vertical">
 
         <TextView
+            android:textSize="16dp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:layout_margin="10dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="맛있는 집밥 레시피로 외식 물가 피하기"/>
-        <HorizontalScrollView
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_margin="5dp"
+            android:id="@+id/recv_geoji_5"
             android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1">
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/recv_geoji_5"
-                android:layout_margin="10dp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"/>
-        </HorizontalScrollView>
+            android:layout_height="wrap_content"/>
     </LinearLayout>
 
     <View
@@ -324,14 +390,20 @@
         android:orientation="vertical">
 
         <TextView
+            android:textSize="16dp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:layout_marginStart="10dp"
+            android:layout_marginVertical="5dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="어머니, 저희 용돈도 긴축입니까"/>
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/recv_geoji_6"
-                android:layout_margin="10dp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recv_geoji_6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp" />
     </LinearLayout>
 
 

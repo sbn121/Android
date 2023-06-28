@@ -4,19 +4,36 @@ import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.viewpager2.widget.ViewPager2;
 
+import android.util.Log;
 import android.view.LayoutInflater;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.project01_sbntalk.R;
 import com.example.project01_sbntalk.databinding.FragmentOpenSub4Binding;
+import com.example.project01_sbntalk.geoji.Geoji1DTO;
+import com.example.project01_sbntalk.geoji.Geoji2DTO;
+import com.example.project01_sbntalk.geoji.Geoji3DTO;
+import com.example.project01_sbntalk.geoji.Geoji4DTO;
+import com.example.project01_sbntalk.geoji.OpenTalkGeoji1Adapter;
+import com.example.project01_sbntalk.geoji.OpenTalkGeoji2Adapter;
+import com.example.project01_sbntalk.geoji.OpenTalkGeoji3Adapter;
+import com.example.project01_sbntalk.geoji.OpenTalkGeoji4Adapter;
 
 import java.util.ArrayList;
 
 public class OpenSub4Fragment extends Fragment {
 
     FragmentOpenSub4Binding binding;
+
+//    ViewPager2 pager2;
+//
+//    public OpenSub4Fragment(ViewPager2 pager2) {
+//        this.pager2 = pager2;
+//    }
 
 
     @Override
@@ -41,6 +58,8 @@ public class OpenSub4Fragment extends Fragment {
         binding.recvGeoji6.setAdapter(new OpenTalkGeoji2Adapter(getList6()));
         binding.recvGeoji6.setLayoutManager(new LinearLayoutManager(getContext(), LinearLayoutManager.HORIZONTAL, false));
 
+
+
         return binding.getRoot();
     }
 
@@ -59,57 +78,67 @@ public class OpenSub4Fragment extends Fragment {
 
     public ArrayList<Geoji2DTO> getList2(){
         ArrayList<Geoji2DTO> list = new ArrayList<>();
-        list.add(new Geoji2DTO(R.drawable.ic_launcher_background, "거지방", "21명"));
-        list.add(new Geoji2DTO(R.drawable.ic_launcher_background, "거지방", "1명"));
-        list.add(new Geoji2DTO(R.drawable.ic_launcher_background, "거지방", "01명"));
-        list.add(new Geoji2DTO(R.drawable.ic_launcher_background, "거지방", "21명"));
-        list.add(new Geoji2DTO(R.drawable.ic_launcher_background, "거지방", "21명"));
-        list.add(new Geoji2DTO(R.drawable.ic_launcher_background, "거지방", "21명"));
+        list.add(new Geoji2DTO(R.drawable.geoji1_1, "거지방", "21명"));
+        list.add(new Geoji2DTO(R.drawable.geoji1_2, "거지방", "1명"));
+        list.add(new Geoji2DTO(R.drawable.geoji1_3, "거지방", "01명"));
+        list.add(new Geoji2DTO(R.drawable.geoji1_4, "거지방", "21명"));
+        list.add(new Geoji2DTO(R.drawable.geoji1_5, "거지방", "21명"));
+        list.add(new Geoji2DTO(R.drawable.geoji1_6, "거지방", "21명"));
         return list;
     }
 
     public ArrayList<Geoji3DTO> getList3() {
         ArrayList<Geoji3DTO> list = new ArrayList<>();
-        list.add(new Geoji3DTO(R.drawable.ic_launcher_background, R.drawable.ic_launcher_background, R.drawable.ic_launcher_background, R.drawable.ic_launcher_background,
-                R.drawable.ic_launcher_background, R.drawable.ic_launcher_background, R.drawable.ic_launcher_background,
-                "사이드프로젝트", "[스퍼릿] 사이드프로젝트/포프폴리오/스타트업/IT", "어쩌고", "저쩌고", "168명", "154명", "22명"));
-        list.add(new Geoji3DTO(R.drawable.ic_launcher_background, R.drawable.ic_launcher_background, R.drawable.ic_launcher_background, R.drawable.ic_launcher_background,
-                R.drawable.ic_launcher_background, R.drawable.ic_launcher_background, R.drawable.ic_launcher_background, "사이드프로젝트", "[스퍼릿] 사이드프로젝트/포프폴리오/스타트업/IT", "어쩌고", "저쩌고", "168명", "154명", "22명"));
-        list.add(new Geoji3DTO(R.drawable.ic_launcher_background, R.drawable.ic_launcher_background, R.drawable.ic_launcher_background, R.drawable.ic_launcher_background,
-                R.drawable.ic_launcher_background, R.drawable.ic_launcher_background, R.drawable.ic_launcher_background, "사이드프로젝트", "[스퍼릿] 사이드프로젝트/포프폴리오/스타트업/IT", "어쩌고", "저쩌고", "168명", "154명", "22명"));
-
+        list.add(new Geoji3DTO(R.drawable.geoji1_5, R.drawable.geoji1_1, R.drawable.geoji1_2, R.drawable.geoji1_3,
+                R.drawable.geoji1_4, R.drawable.geoji1_7, R.drawable.geoji1_6,
+                "사이드프로젝트", "[스퍼릿] 사이드프로젝트/포프폴리오/스타트업/IT", "어쩌고",
+                "저쩌고", "168명", "154명", "22명"));
+        list.add(new Geoji3DTO(R.drawable.geoji1_5, R.drawable.geoji1_1, R.drawable.geoji1_2, R.drawable.geoji1_3,
+                R.drawable.geoji1_4, R.drawable.geoji1_7, R.drawable.geoji1_6,
+                "사이드프로젝트", "[스퍼릿] 사이드프로젝트/포프폴리오/스타트업/IT", "어쩌고",
+                "저쩌고", "168명", "154명", "22명"));
+        list.add(new Geoji3DTO(R.drawable.geoji1_5, R.drawable.geoji1_1, R.drawable.geoji1_2, R.drawable.geoji1_3,
+                R.drawable.geoji1_4, R.drawable.geoji1_7, R.drawable.geoji1_6,
+                "사이드프로젝트", "[스퍼릿] 사이드프로젝트/포프폴리오/스타트업/IT", "어쩌고",
+                "저쩌고", "168명", "154명", "22명"));
         return list;
     }
 
     public ArrayList<Geoji4DTO> getList4(){
         ArrayList<Geoji4DTO> list = new ArrayList<>();
-        list.add(new Geoji4DTO(R.drawable.ic_launcher_background, R.drawable.ic_launcher_background, "절약방", "#절약방 #절약 #부자 #영수증 #살말", "3명"));
-        list.add(new Geoji4DTO(R.drawable.ic_launcher_background, R.drawable.ic_launcher_background, "절약방", "#절약방 #절약 #부자 #영수증 #살말", "3명"));
-        list.add(new Geoji4DTO(R.drawable.ic_launcher_background, R.drawable.ic_launcher_background, "절약방", "#절약방 #절약 #부자 #영수증 #살말", "3명"));
+        list.add(new Geoji4DTO(R.drawable.geoji1_1, R.drawable.geoji1_2, "절약방", "#절약방 #절약 #부자 #영수증 #살말", "3명"));
+        list.add(new Geoji4DTO(R.drawable.geoji1_3, R.drawable.geoji1_4, "절약방", "#절약방 #절약 #부자 #영수증 #살말", "3명"));
+        list.add(new Geoji4DTO(R.drawable.geoji1_5, R.drawable.geoji1_6, "절약방", "#절약방 #절약 #부자 #영수증 #살말", "3명"));
         return list;
     }
 
     public ArrayList<Geoji3DTO> getList5() {
         ArrayList<Geoji3DTO> list = new ArrayList<>();
-        list.add(new Geoji3DTO(R.drawable.ic_launcher_background, R.drawable.ic_launcher_background, R.drawable.ic_launcher_background, R.drawable.ic_launcher_background,
-                R.drawable.ic_launcher_background, R.drawable.ic_launcher_background, R.drawable.ic_launcher_background,
-                "사이드프로젝트", "[스퍼릿] 사이드프로젝트/포프폴리오/스타트업/IT", "어쩌고", "저쩌고", "168명", "154명", "22명"));
-        list.add(new Geoji3DTO(R.drawable.ic_launcher_background, R.drawable.ic_launcher_background, R.drawable.ic_launcher_background, R.drawable.ic_launcher_background,
-                R.drawable.ic_launcher_background, R.drawable.ic_launcher_background, R.drawable.ic_launcher_background, "사이드프로젝트", "[스퍼릿] 사이드프로젝트/포프폴리오/스타트업/IT", "어쩌고", "저쩌고", "168명", "154명", "22명"));
+        list.add(new Geoji3DTO(R.drawable.geoji1_5, R.drawable.geoji1_1, R.drawable.geoji1_2, R.drawable.geoji1_3,
+                R.drawable.geoji1_4, R.drawable.geoji1_7, R.drawable.geoji1_6,
+                "사이드프로젝트", "[스퍼릿] 사이드프로젝트/포프폴리오/스타트업/IT", "어쩌고",
+                "저쩌고", "168명", "154명", "22명"));
+        list.add(new Geoji3DTO(R.drawable.geoji1_5, R.drawable.geoji1_1, R.drawable.geoji1_2, R.drawable.geoji1_3,
+                R.drawable.geoji1_4, R.drawable.geoji1_7, R.drawable.geoji1_6,
+                "사이드프로젝트", "[스퍼릿] 사이드프로젝트/포프폴리오/스타트업/IT", "어쩌고",
+                "저쩌고", "168명", "154명", "22명"));
         return list;
     }
 
     public ArrayList<Geoji2DTO> getList6(){
         ArrayList<Geoji2DTO> list = new ArrayList<>();
-        list.add(new Geoji2DTO(R.drawable.ic_launcher_background, "거지방", "21명"));
-        list.add(new Geoji2DTO(R.drawable.ic_launcher_background, "거지방", "1명"));
-        list.add(new Geoji2DTO(R.drawable.ic_launcher_background, "거지방", "01명"));
-        list.add(new Geoji2DTO(R.drawable.ic_launcher_background, "거지방", "21명"));
-        list.add(new Geoji2DTO(R.drawable.ic_launcher_background, "거지방", "21명"));
-        list.add(new Geoji2DTO(R.drawable.ic_launcher_background, "거지방", "21명"));
-        list.add(new Geoji2DTO(R.drawable.ic_launcher_background, "거지방", "21명"));
-        list.add(new Geoji2DTO(R.drawable.ic_launcher_background, "거지방", "21명"));
-        list.add(new Geoji2DTO(R.drawable.ic_launcher_background, "거지방", "21명"));
+        list.add(new Geoji2DTO(R.drawable.geoji1_1, "거지방", "21명"));
+        list.add(new Geoji2DTO(R.drawable.geoji1_2, "거지방", "1명"));
+        list.add(new Geoji2DTO(R.drawable.geoji1_3, "거지방", "01명"));
+        list.add(new Geoji2DTO(R.drawable.geoji1_4, "거지방", "21명"));
+        list.add(new Geoji2DTO(R.drawable.geoji1_5, "거지방", "21명"));
+        list.add(new Geoji2DTO(R.drawable.geoji1_6, "거지방", "21명"));
+        list.add(new Geoji2DTO(R.drawable.geoji1_1, "거지방", "21명"));
+        list.add(new Geoji2DTO(R.drawable.geoji1_2, "거지방", "1명"));
+        list.add(new Geoji2DTO(R.drawable.geoji1_3, "거지방", "01명"));
+        list.add(new Geoji2DTO(R.drawable.geoji1_4, "거지방", "21명"));
+        list.add(new Geoji2DTO(R.drawable.geoji1_5, "거지방", "21명"));
+        list.add(new Geoji2DTO(R.drawable.geoji1_6, "거지방", "21명"));
         return list;
     }
 
