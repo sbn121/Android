@@ -18,6 +18,9 @@ public interface RetrofitInterface {
         @POST
         Call<String> postLogin(@Url String url, @FieldMap HashMap<String, Object> paramMap);
 
+        @GET("{login}")
+        Call<String> getLogin(@Path("login") String mapping, @FieldMap HashMap<String, Object> paramMap);
+
 
 
 
