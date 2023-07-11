@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".member.LoginActivity"
+    android:orientation="vertical">
+
+
+    <!-- Clide Url을 이용해서 이미지를 붙이는 처리.예정 -->
+    <ImageView
+        android:id="@+id/imgv_logo"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/ic_launcher_foreground"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:startIconDrawable="@drawable/baseline_airline_seat_individual_suite_24"
+        app:startIconContentDescription="아이디"
+        android:hint="아이디"
+        app:boxStrokeColor="#123456"
+        app:boxBackgroundColor="@color/white"
+        app:helperText="아이디를 입력하세요"
+        android:layout_margin="10dp"
+        >
+
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edt_id"
+            android:inputType="text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            />
+
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:startIconDrawable="@drawable/baseline_arrow_upward_24"
+        app:startIconContentDescription="비밀번호"
+        app:helperText="비밀번호를 입력하세요"
+        android:hint="비밀번호"
+        app:boxStrokeColor="#123456"
+        app:passwordToggleEnabled="true"
+        app:boxBackgroundColor="@color/white"
+        android:layout_margin="10dp"
+        >
+
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edt_pw"
+            android:inputType="textPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            />
+
+        <CheckBox
+            android:id="@+id/chk_login"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="로그인 정보 기억하기"/>
+
+        <Button
+            android:id="@+id/btn_login"
+            android:layout_marginTop="20dp"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="로그인"/>
+        <Button
+            android:layout_marginTop="20dp"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="네이버 아이디로 로그인(예정)"/>
+        <Button
+            android:layout_marginTop="20dp"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="카카오 로그인 예정"/>
+
+        <LinearLayout
+            android:gravity="center"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="아직 회원이 아니라면?"/>
+            <TextView
+                android:id="@+id/tv_join"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="회원가입"
+                android:textStyle="bold|italic"
+                android:textColor="#2379CF"/>
+
+        </LinearLayout>
+
+
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+</LinearLayout>
