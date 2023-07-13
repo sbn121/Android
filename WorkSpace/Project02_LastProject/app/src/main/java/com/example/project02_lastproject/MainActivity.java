@@ -9,6 +9,7 @@ import android.widget.Toast;
 import com.example.project02_lastproject.common.CommonConn;
 import com.example.project02_lastproject.customer.CustomerFragment;
 import com.example.project02_lastproject.databinding.ActivityMainBinding;
+import com.example.project02_lastproject.employee.EmployeeFragment;
 
 import me.ibrahimsn.lib.OnItemSelectedListener;
 
@@ -29,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
                 if(i==0) {
                     getSupportFragmentManager().beginTransaction().replace(R.id.container, new CustomerFragment()).commit();
                 }else if(i==1){
-
+                    getSupportFragmentManager().beginTransaction().replace(R.id.container, new EmployeeFragment()).commit();
                 }else if(i==2){
 
                 }else if(i==3){
