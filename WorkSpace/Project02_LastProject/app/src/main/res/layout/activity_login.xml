@@ -71,18 +71,19 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:text="로그인"/>
-        <Button
-            android:layout_marginTop="20dp"
-            android:layout_width="200dp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:text="네이버 아이디로 로그인(예정)"/>
-        <Button
-            android:layout_marginTop="20dp"
+        <ImageView
+            android:id="@+id/imgv_kakaologin"
+            android:src="@drawable/kakao_login_large_narrow"
             android:layout_width="200dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:text="카카오 로그인 예정"/>
+        <com.navercorp.nid.oauth.view.NidOAuthLoginButton
+            android:id="@+id/buttonOAuthLoginImg"
+            android:layout_gravity="center"
+            android:layout_width="200dp"
+            android:layout_height="50dp" />
+
 
         <LinearLayout
             android:gravity="center"
