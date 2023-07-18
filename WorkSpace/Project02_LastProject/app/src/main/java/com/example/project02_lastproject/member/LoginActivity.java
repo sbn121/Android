@@ -132,6 +132,7 @@ public class LoginActivity extends AppCompatActivity {
         });
     }
 
+
     public void naverLogin(){
         binding.buttonOAuthLoginImg.setOAuthLogin(new OAuthLoginCallback() {
             @Override
